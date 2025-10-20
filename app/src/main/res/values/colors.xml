@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="raceme_brick">#8E3D3A</color>
+    <color name="raceme_brick_dark">#6E2E2B</color>
+
+    <color name="raceme_outline">#D8C4B6</color>
+
+    <color name="raceme_brick_container">#B65A56</color>
+
+    <color name="raceme_cream">#FFF7E6</color>
+    <color name="raceme_on_cream">#2B2B2B</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

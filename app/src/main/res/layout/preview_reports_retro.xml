@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FCF4F1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <TextView
+            android:text="Progress Reports"
+            android:fontFamily="@font/vt323"
+            android:textSize="28sp"
+            android:textColor="#2A2323"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Weekly • Steps"
+            android:fontFamily="@font/vt323"
+            android:textSize="18sp"
+            android:textColor="#6E5C55"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- WEEKLY -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="#D9C9C4"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:padding="16dp"
+                android:background="@drawable/retro_card_bg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="This Week"
+                    android:fontFamily="@font/vt323"
+                    android:textSize="20sp"
+                    android:textColor="#2A2323"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Empty bars -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="M" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="T" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="W" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="T" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="F" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="S" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@drawable/retro_bar_bg"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="S" android:fontFamily="@font/vt323" android:textColor="#6E5C55" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:text="Total 0 steps  •  Best day —"
+                    android:fontFamily="@font/vt323"
+                    android:textSize="16sp"
+                    android:textColor="#6E5C55"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- MONTHLY -->
+        <TextView
+            android:text="Monthly • Steps"
+            android:fontFamily="@font/vt323"
+            android:textSize="18sp"
+            android:textColor="#6E5C55"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="#D9C9C4"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:padding="16dp"
+                android:background="@drawable/retro_card_bg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Last 4 Weeks"
+                    android:fontFamily="@font/vt323"
+                    android:textSize="20sp"
+                    android:textColor="#2A2323"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <View android:layout_width="0dp" android:layout_height="8dp" android:layout_weight="1" android:background="@drawable/retro_bar_bg"/>
+                    <Space android:layout_width="8dp" android:layout_height="0dp"/>
+                    <View android:layout_width="0dp" android:layout_height="8dp" android:layout_weight="1" android:background="@drawable/retro_bar_bg"/>
+                    <Space android:layout_width="8dp" android:layout_height="0dp"/>
+                    <View android:layout_width="0dp" android:layout_height="8dp"  android:layout_weight="1" android:background="@drawable/retro_bar_bg"/>
+                    <Space android:layout_width="8dp" android:layout_height="0dp"/>
+                    <View android:layout_width="0dp" android:layout_height="8dp" android:layout_weight="1" android:background="@drawable/retro_bar_bg"/>
+                </LinearLayout>
+
+                <TextView
+                    android:text="Avg 0 steps/day"
+                    android:fontFamily="@font/vt323"
+                    android:textSize="16sp"
+                    android:textColor="#6E5C55"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

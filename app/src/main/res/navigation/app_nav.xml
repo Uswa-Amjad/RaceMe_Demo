@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.raceme.ui.home.HomeFragment"
+        android:label="@string/home_title"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/badgesFragment"
+        android:name="com.example.raceme.ui.badges.BadgesFragment"
+        android:label="@string/badges_title"
+        tools:layout="@layout/fragment_badges" />
+
+    <fragment
+        android:id="@+id/quotesFragment"
+        android:name="com.example.raceme.ui.quotes.QuotesFragment"
+        android:label="@string/quotes_title"
+        tools:layout="@layout/fragment_quotes" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.raceme.profile.ui.UserProfileFragment"
+        android:label="@string/username"
+        tools:layout="@layout/fragment_user_profile" />
+
+    <!-- Reports (navigated from Home button) -->
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.raceme.ui.reports.ReportsFragment"
+        android:label="@string/reports_title"
+        tools:layout="@layout/fragment_reports" />
+</navigation>
