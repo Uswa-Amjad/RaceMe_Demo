@@ -11,6 +11,16 @@
             android:textColor="@color/graphite" android:paddingBottom="12dp"
             android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
+        <!-- Quote of the Day -->
+        <TextView
+            android:id="@+id/tvQuote"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="“Stay consistent. Small steps win races.”"
+            android:textSize="16sp" android:textColor="@color/graphite"
+            android:padding="12dp"
+            android:background="@drawable/retro_bar_bg"
+            android:layout_marginBottom="16dp"/>
+
         <Button
             android:id="@+id/btnStart" android:text="Start Race / GPS Tracking"
             android:layout_width="match_parent" android:layout_height="56dp"
@@ -35,6 +45,28 @@
             android:background="@drawable/retro_button_bg" android:textColor="@color/white"
             android:layout_marginBottom="10dp"/>
 
-        <!-- add more dashboard buttons as needed -->
+        <!-- NEW: Reminder, Weekly, Monthly -->
+        <Button
+            android:id="@+id/btnReminder"
+            android:text="Set Reminder"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:background="@drawable/retro_button_bg" android:textColor="@color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnWeeklyReport"
+            android:text="Weekly Report"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:background="@drawable/retro_button_bg" android:textColor="@color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnMonthlyReport"
+            android:text="Monthly Report"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:background="@drawable/retro_button_bg" android:textColor="@color/white"
+            android:layout_marginBottom="10dp"/>
+
     </LinearLayout>
 </ScrollView>
+
