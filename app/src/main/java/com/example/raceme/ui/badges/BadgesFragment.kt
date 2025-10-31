@@ -3,38 +3,45 @@ package com.example.raceme.ui.badges
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.raceme.R
-import com.example.raceme.profile.data.UserProfileRepository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import com.example.raceme.databinding.FragmentBadgesBinding
+import com.example.raceme.ui.adapters.*
+import com.example.raceme.data.*
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
+import java.time.ZoneId
 
-class BadgesFragment : Fragment() {
-    override fun onCreateView(i: LayoutInflater, c: ViewGroup?, s: Bundle?): View {
-        return i.inflate(R.layout.fragment_badges, c, false)
+class BadgesFragment: Fragment() {
+    private var _b: FragmentBadgesBinding? = null
+    private val b get() = _b!!
+    private val repo = RaceRepo()
+    private val adapter = BadgeAdapter()
+
+    override fun onCreateView(i:LayoutInflater, c:ViewGroup?, s:Bundle?): View {
+        _b = FragmentBadgesBinding.inflate(i, c, false); return b.root
     }
 
-    override fun onViewCreated(v: View, s: Bundle?) {
-        val rv = v.findViewById<RecyclerView>(R.id.rvBadges)
-        rv.layoutManager = GridLayoutManager(requireContext(), 3)
+    override fun onViewCreated(v:View, s:Bundle?) {
+        b.rvBadges.layoutManager = GridLayoutManager(requireContext(), 3)
+        b.rvBadges.adapter = adapter
 
-        CoroutineScope(Dispatchers.Main).launch {
-            val profile = try { UserProfileRepository().load() } catch (_: Exception) { null }
-            val hasGoal = (profile?.dailyGoal ?: 0) >= 1000
-            val hasUsername = !profile?.username.isNullOrBlank()
-            val hasPhoto = !profile?.photoUrl.isNullOrBlank()
-
-            val data = listOf(
-                Badge("Set a goal", hasGoal),
-                Badge("Picked a username", hasUsername),
-                Badge("Profile pic", hasPhoto),
-                Badge("First Steps", false),   // placeholders for demo
-                Badge("Consistency", false),
-                Badge("Champion", false)
-            )
-            rv.adapter = BadgesAdapter(data)
+        viewLifecycleOwner.lifecycleScope.launch {
+            combine(repo.badgeDefs(), repo.runs()) { defs, runs ->
+                defs.map { def ->
+                    val earned = when (def.condition) {
+                        "first_run" -> runs.isNotEmpty()
+                        "distance_once" -> runs.any { it.distanceKm + 1e-6 >= (def.distanceKm ?: 0.0) }
+                        "time_of_day" -> runs.any {
+                            val hour = it.startAt.toDate().toInstant().atZone(ZoneId.systemDefault()).hour
+                            hour < (def.beforeHour ?: 6)
+                        }
+                        else -> false
+                    }
+                    BadgeRow(def, earned)
+                }
+            }.collect { adapter.submit(it) }
         }
     }
+    override fun onDestroyView() { super.onDestroyView(); _b = null }
 }

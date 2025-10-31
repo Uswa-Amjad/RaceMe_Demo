@@ -3,7 +3,6 @@ package com.example.raceme.profile.ui
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.raceme.profile.data.UserProfile
 import com.example.raceme.profile.data.UserProfileRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

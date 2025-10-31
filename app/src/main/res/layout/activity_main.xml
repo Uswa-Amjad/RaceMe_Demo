@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/raceme_cream"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/cream">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
+    <fragment
+        android:id="@+id/nav_host"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        app:navGraph="@navigation/app_nav"
-        app:defaultNavHost="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
-        app:menu="@menu/bottom_nav_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/raceme_brick"
-        app:itemTextColor="@color/white"
-        app:itemIconTint="@color/white"
-        app:labelVisibilityMode="labeled"
-        android:layout_gravity="bottom"/>
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

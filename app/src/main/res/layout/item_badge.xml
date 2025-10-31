@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:gravity="center"
-    android:padding="12dp"
-    android:layout_width="match_parent" android:layout_height="wrap_content">
+    android:orientation="vertical" android:padding="16dp"
+    android:gravity="center" android:background="@drawable/retro_card_bg"
+    android:layout_width="match_parent" android:layout_height="140dp"
+    android:layout_margin="8dp">
 
-    <ImageView android:id="@+id/ivBadge"
-        android:layout_width="56dp" android:layout_height="56dp"
-        android:src="@drawable/ic_person_24" android:contentDescription="@string/badges_title"/>
-
-    <TextView android:id="@+id/tvBadgeName"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_marginTop="6dp" android:textSize="14sp"
-        android:fontFamily="@font/vt323" android:text="Badge"/>
+    <TextView android:id="@+id/tvBadgeIcon" android:text="🏆"
+        android:textSize="22sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:id="@+id/tvBadgeTitle" android:text="First Run"
+        android:textStyle="bold" android:textColor="@color/graphite"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:id="@+id/tvBadgeState" android:text="Unlocked"
+        android:textColor="@color/muted" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 </LinearLayout>

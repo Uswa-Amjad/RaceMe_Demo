@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="raceme_brick">#8E3D3A</color>
-    <color name="raceme_brick_dark">#6E2E2B</color>
-
-    <color name="raceme_outline">#D8C4B6</color>
-
-    <color name="raceme_brick_container">#B65A56</color>
-
-    <color name="raceme_cream">#FFF7E6</color>
-    <color name="raceme_on_cream">#2B2B2B</color>
-
+    <color name="race_red">#D6453C</color>
+    <color name="race_red_dark">#B0362F</color>
+    <color name="cream">#FCF7F2</color>
+    <color name="card_tint">#F4E7E6</color>
+    <color name="graphite">#333333</color>
+    <color name="muted">#6F6F6F</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="black">#FF000000</color>
+
 </resources>

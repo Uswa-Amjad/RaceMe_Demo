@@ -1,15 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.raceme">
+
+    <!-- Firebase/HTTP needs internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- If you’ll do GPS tracking later, uncomment these: -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> -->
+    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
 
     <application
         android:allowBackup="true"
         android:label="RaceMe"
         android:icon="@mipmap/ic_launcher"
-        android:supportsRtl="true">
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RaceMe"
+        android:usesCleartextTraffic="false">
 
-        <!-- Make DemoActivity the temporary launcher -->
+        <!-- Your launcher activity that hosts the NavHost + bottom nav -->
         <activity
-            android:name=".DemoActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +32,15 @@
             </intent-filter>
         </activity>
 
-        <!-- If your real launcher also has MAIN/LAUNCHER, remove that intent-filter for now -->
+        <!-- Optional auth screens (declare only if you actually use them) -->
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
 
+        <!-- No need to declare fragments in the manifest -->
+        <!-- The Navigation graph (res/navigation/app_nav.xml) handles them -->
     </application>
 </manifest>

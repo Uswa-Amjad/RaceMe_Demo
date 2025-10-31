@@ -1,15 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.RaceMe" parent="Theme.Material3.Light.NoActionBar">
-        <item name="android:fontFamily">@font/vt323</item>
-
-        <item name="colorPrimary">@color/raceme_brick</item>
-        <item name="colorPrimaryContainer">@color/raceme_brick_container</item>
-
-        <item name="colorSurface">@color/raceme_cream</item>
-        <item name="colorOnSurface">@color/raceme_on_cream</item>
-
-        <item name="android:statusBarColor">@color/raceme_brick_dark</item>
-        <item name="android:navigationBarColor">@color/raceme_brick_dark</item>
+        <item name="colorPrimary">@color/race_red</item>
+        <item name="android:statusBarColor">@color/race_red</item>
+        <item name="android:navigationBarColor">@color/cream</item>
     </style>
 </resources>
+

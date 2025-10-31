@@ -1,41 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RaceMe</string>
-
-    <!-- Home -->
-    <string name="home_title">RaceMe</string>
-    <string name="go_profile">Profile</string>
-    <string name="go_badges">Badges</string>
-    <string name="go_quotes">Quotes</string>
-    <string name="go_logout">Log out</string>
-
-    <!-- Auth -->
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="have_account">Have an account? Login</string>
-    <string name="no_account">No account? Register</string>
-
-    <!-- Profile -->
-    <string name="profile_photo">Profile photo</string>
-    <string name="change_photo">Change photo</string>
-    <string name="username">Username</string>
-    <string name="bio">Bio</string>
-    <string name="daily_step_goal">Daily step goal</string>
-    <string name="save">Save</string>
-    <string name="saved">Saved</string>
-
-    <!-- Badges / Quotes -->
-    <string name="badges_title">Badges</string>
-    <string name="quotes_title">Motivation</string>
-
-    <!-- Weekly / Monthly Reports -->
-    <string name="go_reports">Reports</string>
-    <string name="reports_title">Reports</string>
-    <string name="weekly">Weekly</string>
-    <string name="monthly">Monthly</string>
-    <string name="weekly_report">Weekly Report</string>
-    <string name="monthly_report">Monthly Report</string>
-
 </resources>
+
